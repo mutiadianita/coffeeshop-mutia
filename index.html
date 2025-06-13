@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Hero Section with Navbar</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Use Inter as the default font family */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header & Navbar -->
+    <header class="absolute top-0 left-0 w-full z-30 text-white">
+        <div class="container mx-auto flex items-center justify-between p-4 sm:p-6">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold">YourLogo</a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#" class="hover:text-blue-300 transition duration-300">Home</a>
+                <a href="about.html" class="hover:text-blue-300 transition duration-300">About</a>
+                <a href="#" class="hover:text-blue-300 transition duration-300">Contact Us</a>
+                <a href="#gallery" class="hover:text-blue-300 transition duration-300">Gallery</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 bg-opacity-75 backdrop-blur-sm">
+            <a href="#" class="block py-3 px-4 text-sm hover:bg-gray-700 transition duration-300">Home</a>
+            <a href="#" class="block py-3 px-4 text-sm hover:bg-gray-700 transition duration-300">About</a>
+            <a href="#" class="block py-3 px-4 text-sm hover:bg-gray-700 transition duration-300">Contact Us</a>
+            <a href="#gallery" class="block py-3 px-4 text-sm hover:bg-gray-700 transition duration-300">Gallery</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="relative bg-cover bg-center bg-no-repeat h-screen" style="background-image: url('/hero.jpeg');">
+        <!-- Overlay for better text readability -->
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+
+        <!-- Content Container -->
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4 sm:px-6 lg:px-8">
+            <!-- Main Heading -->
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4">
+                Bangun Ide Besar Anda Berikutnya
+            </h1>
+
+            <!-- Subheading/Description -->
+            <p class="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto mb-8 text-gray-200">
+                Bagian hero yang responsif dan dirancang dengan indah untuk memulai proyek Anda dan menarik perhatian pengunjung.
+            </p>
+
+            <!-- Call to Action Button -->
+            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105">
+                Mulai
+            </a>
+        </div>
+    </div>
+
+    <!-- Coffee Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <!-- Section Title -->
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+                Galeri Menu Kopi Kami
+            </h2>
+            
+            <!-- Grid Container -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Gallery Item 1 -->
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden group">
+                    <img src="https://placehold.co/600x400/A56A49/FFFFFF?text=Espresso" alt="Foto Kopi Espresso" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800">Espresso</h3>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden group">
+                    <img src="https://placehold.co/600x400/8B4513/FFFFFF?text=Latte" alt="Foto Kopi Latte" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800">Latte</h3>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden group">
+                    <img src="https://placehold.co/600x400/D2B48C/FFFFFF?text=Cappuccino" alt="Foto Kopi Cappuccino" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800">Cappuccino</h3>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden group">
+                    <img src="https://placehold.co/600x400/5C4033/FFFFFF?text=Americano" alt="Foto Kopi Americano" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800">Americano</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- You can add more sections of your website here -->
+    <div class="py-20 px-4 text-center">
+        <h2 class="text-3xl font-bold mb-4">Konten di Bawah Galeri</h2>
+        <p class="text-gray-600">Di sinilah sisa konten halaman Anda akan ditempatkan.</p>
+    </div>
+
+    <script>
+        // JavaScript to toggle the mobile menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
